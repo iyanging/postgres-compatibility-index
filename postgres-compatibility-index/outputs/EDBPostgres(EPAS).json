@@ -63,6 +63,6 @@
             "pg_stat_statements": "full",
             "pg_walinspect": "full",
             "External Programming Language": "full"
-        }		
+        }
     }
 }

@@ -23,13 +23,13 @@ The final PCI score is a weighted average of the scores for each category.
 
 
 ### Prerequisites
-- Python 3.5+, psycopg2, postgresql client and working connection to the database to be tested. 
+- Python 3.5+, psycopg2, postgresql client and working connection to the database to be tested.
 - pip install tabulate
 - Install postgis, pgvector extension to score more points as in some cases it will require pre-installation.
 
 ## Automated scoring
 - Set environment variables or provide inline username, connection details of the database where tests are supposed to run.
-- You will lose points for extensions that you do not install. 
+- You will lose points for extensions that you do not install.
 - python3 pci_autotest.py
 
 ### Example Output in Tabular Format
