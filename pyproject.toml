@@ -12,4 +12,5 @@ dependencies = [
 [dependency-groups]
 dev = [
     "pre-commit>=4.2.0",
+    "types-psycopg2>=2.9.21.20250318",
 ]

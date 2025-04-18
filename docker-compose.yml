@@ -1,0 +1,39 @@
+services:
+  postgres:
+    image: postgres:17.4
+    restart: no
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+    ports:
+      - 54320:5432
+
+  polardb:
+    image: polardb/polardb_pg_local_instance:15
+    restart: no
+    environment:
+      - POLARDB_USER=postgres
+      - POLARDB_PASSWORD=postgres
+    ports:
+      - 54321:5432
+
+  kingbase:
+    image: iyanging/kingbase:v009r001c002b0014
+    restart: no
+    privileged: true
+    environment:
+      - DB_MODE=pg
+      - ENABLE_CI=no
+      - DB_USER=postgres
+      - DB_PASSWORD=postgres
+    ports:
+      - 54322:54321
+
+  mogdb:
+    image: swr.cn-north-4.myhuaweicloud.com/mogdb/mogdb:5.0.9
+    restart: no
+    privileged: true
+    environment:
+      - GS_PASSWORD=Enmo@123
+    ports:
+      - 54324:5432
